@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>The Beloved Teddy Bear</title>
+    <style>
+        body {
+            font-family: 'Bubblegum Sans', cursive;
+            background: linear-gradient(to bottom, #fff8f0, #ffe0e0);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 {
+            color: #8b4513;
+        }
+
+        h2 {
+            color: #a0522d;
+            margin-top: 20px;
+        }
+
+        h3 {
+            color: blueviolet;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #a0522d;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        em {
+            color: #6b4e2d;
+        }
+
+        #factButton {
+            background-color: #ffcccb;
+            /* soft pink */
+            color: #4b2e2e;
+            /* teddy bear brown */
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        #factButton:hover {
+            background-color: #ffb6b6;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        #teddyVideo {
+            display: block;
+            margin: 40px auto;
+            /* centers the video and adds vertical space */
+            border: 4px solid #a0522d;
+            /* teddy bear brown border */
+            border-radius: 16px;
+            /* rounded corners */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            /* soft shadow */
+            max-width: 90%;
+            /* responsive on smaller screens */
+        }
+
+        video {
+            display: block;
+            margin: 20px auto;
+            border: 4px solid #a0522d;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+
+        #teddyBear {
+            position: fixed;
+            top: 400px;
+            left: 0;
+            width: 100px;
+            transition: left 1s ease-in-out;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #ffeaea;
+            padding: 20px;
+            margin-top: 40px;
+            font-family: 'Comic Sans MS', cursive;
+            color: #555;
+            border-top: 2px dashed #f8b5b5;
+        }
+
+        footer a {
+            color: #d66c6c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* Style the form container */
+        #bearForm {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff8f2;
+            border-radius: 16px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        /* Style inputs and textarea */
+        #bearForm input,
+        #bearForm textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ffcccc;
+            border-radius: 12px;
+            background-color: #fff;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        /* Style the button */
+        #bearForm button {
+            background-color: #ffa4b6;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        /* Button hover effect */
+        #bearForm button:hover {
+            background-color: #ff7a95;
+            transform: scale(1.05);
+        }
+
+        /* Optional: Add cute emojis or hearts in a heading */
+        h4 {
+            text-align: center;
+            color: #d66c6c;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🐻 Welcome to My Teddy Bear Page 🐾</h1>
+    <a href="https://eu.jellycat.com/bartholomew-bear-strawberry/" target="_blank">
+        <img src="" alt="jelly Bartholomew bear" class="" />
+    </a>
+    <div class="grid">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/165/610/original/OIP.jpg?1747053911"
+            alt="" />
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/165/611/original/download.jpg?1747054105"
+            alt="" />
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/165/612/original/OIP_%281%29.jpg?1747054117"
+            alt="" />
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/165/613/original/OIP_%282%29.jpg?1747054129"
+            alt="" />
+    </div>
+    <p>The <span class="highlight">teddy bear</span> is one of the most beloved toys in the world — cherished by
+        children
+        and adults alike. More than just a toy, it symbolizes <em>comfort, nostalgia, and emotional connection</em>.</p>
+    <h3>Did You Know?</h3>
+    <p id="countdown">Counting down to Teddy’s birthday...</p>
+    <p id="countdown" style="font-size: 1.5em; color: #d66c6c;"></p>
+
+    <button id="factButton">🐻 Show a Teddy Bear Fact</button>
+    <p id="factDisplay" style="margin-top: 10px; font-style: italic;"></p>
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/166/340/original/Sitting-Bear-Transparent-PNG.png?1747900072"
+        alt="sitting-Bear" id="teddyBear">
+
+
+    <h2>Origin</h2>
+    <p>Jelly Bartholomew Bear <strong>Limited edition versions of the bear is available</strong>, It measures 26cm *
+        12cm * 8cm and has a sitting height of 22cm<em> the teddy bear</em> is suitable for all ages, even from birth
+    </p>
+    <h2>Soft, tawny-coulored teddy bear</h2>
+    <ul>
+        <li>Given as gifts of love, sympathy, or celebration</li>
+        <li>Featured in famous stories like <em></em>, <em>Paddington</em>, and <em>Corduroy</em></li>
+    </ul>
+    <p>
+        My favorite childhood toy was a teddy bear given to me by my mother and father.
+        Over the years, Teddy has been a constant companion through life's ups and downs. He's shared laughter,tears and
+        lots of joy.
+        He was my best toy one i would always remember.
+        No matter the time or place, the teddy bear remains a timeless companion.</p>
+    <h2>Watch My Teddy Bear Video!</h2>
+    <video id="teddyVideo" controls width="600">
+        <source
+            src="https://videocdn.cdnpk.net/videos/510aaed7-4737-40cd-aa37-2f52f812779d/horizontal/previews/clear/large.mp4?token=exp=1747908096~hmac=1dc351794c7b4b0ae4428b32160030396d1fd21cb544a98aa8cec264a2c30f6e"
+            type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <h4>Send a Message to the Bear🧸</h4>
+    <form id="bearForm">
+        <input type="text" placeholder="Your name" required>
+        <input type="email" placeholder="Your email" required>
+        <textarea placeholder="Your message to Teddy..." required></textarea>
+        <button type="submit">Send 🐻</button>
+    </form>
+    <footer>
+        <footer>
+            <p>
+                Made with 💖 by Alberta Jansen Van Nieuwenhuizen <br> as part of the 🧸 Beloved Toy Challenge
+                <a href="https://contact@shecodesfoundation.org">Learn more on Shecodes</a>
+            </p>
+            <script>
+                const bday = new Date("2025-10-15");
+                const interval = setInterval(() => {
+                    const now = new Date();
+                    const time = bday - now;
+                    if (time < 0) return clearInterval(interval);
+                    const days = Math.floor(time / (1000 * 60 * 60 * 24));
+                    document.getElementById("countdown").innerText = `🎉 ${days} days until Teddy’s Birthday! 🎈`;
+                }, 1000);
+
+                // Array of fun teddy bear facts
+                const facts = [
+                    "The first teddy bear was created in 1902.",
+                    "Teddy bears are named after President Theodore Roosevelt.",
+                    "The most expensive teddy bear ever sold cost over $2 million!",
+                    "Teddy bears are often used in therapy for comfort and healing.",
+                    "There are museums around the world dedicated to teddy bears."
+                ];
+
+                // Function to display a random fact
+                function showRandomFact() {
+                    const fact = facts[Math.floor(Math.random() * facts.length)];
+                    document.getElementById("factDisplay").textContent = fact;
+                }
+
+                // Wait for the DOM to load before assigning the button handler
+                document.addEventListener("DOMContentLoaded", function () {
+                    const button = document.getElementById("factButton");
+                    if (button) {
+                        button.addEventListener("click", showRandomFact);
+                        const bear = document.getElementById("teddyBear");
+                        const newLeft = Math.floor(Math.random() * 80); // Move between 0% and 80%
+                        bear.style.left = `${newLeft}%`;
+
+                    }
+                });
+            </script>
+</body>
+
+</html>
