@@ -1,13 +1,4 @@
-        body {
-            font-family: 'Bubblegum Sans', cursive;
-            background: linear-gradient(to bottom, #fff8f0, #ffe0e0);
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-            margin: 0;
-        }
-
-        h1 {
+           h1 {
             color: #8b4513;
         }
 
@@ -17,7 +8,7 @@
         }
 
         h3 {
-            color: blueviolet;
+            color: rgb(41, 125, 250);
         }
 
         .highlight {
@@ -35,26 +26,46 @@
         }
 
         #factButton {
-            background-color: #ffcccb;
-            /* soft pink */
-            color: #4b2e2e;
-            /* teddy bear brown */
+            background-color: #ffb6c1;
+            color: #fff;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.2em;
+            border-radius: 12px;
+            cursor: pointer;
+            font-family: 'Comic Sans MS', cursive;
+            box-shadow: 0 0 10px #ff99cc, 0 0 20px #ff66b2;
+            text-shadow: 1px 1px 3px #d63384;
+            transition: all 0.3s ease;
+        }
+
+        /* Optional: glow on hover */
+        #factButton:hover {
+            box-shadow: 0 0 20px #ff69b4, 0 0 30px #ff1493;
+            transform: scale(1.05);
+        }
+
+        .submit-button {
+            background-color: #ffb6c1;
+            color: #fff;
             border: none;
             padding: 12px 24px;
             font-size: 1.1em;
-            font-weight: bold;
-            border-radius: 12px;
+            border-radius: 10px;
             cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-family: 'Comic Sans MS', cursive;
+            text-shadow: 1px 1px 2px #d63384;
+            box-shadow: 0 0 10px #ff99cc;
             transition: all 0.3s ease;
-            margin-top: 10px;
         }
 
-        #factButton:hover {
-            background-color: #ffb6b6;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        /* Optional: glow and scale on hover */
+        .submit-button:hover {
+            text-shadow: 2px 2px 4px #ff69b4;
+            box-shadow: 0 0 20px #ff1493;
             transform: scale(1.05);
         }
+
 
         #teddyVideo {
             display: block;
@@ -155,4 +166,48 @@
         h4 {
             text-align: center;
             color: #d66c6c;
-        } 
+        }
+
+        .title {
+            font-family: 'Comic Sans MS', cursive;
+            color: #d66c6c;
+            font-size: 3em;
+            text-align: center;
+            text-shadow: 3px 3px 0 #ffc0cb, 6px 6px 0 #ff99aa;
+
+        }
+
+        .glow {
+            font-family: 'Comic Sans MS', cursive;
+            color: #ff6fa3;
+            text-align: center;
+            font-size: 2em;
+            text-shadow:
+                0 0 5px #f0f,
+                0 0 10px #0ff,
+                0 0 15px #ff0,
+                0 0 20px #f0f;
+        }
+
+        .subtitle {
+            font-family: 'Comic Sans MS', cursive;
+            color: #ff69b4;
+            text-align: center;
+            font-size: 2.2em;
+            text-shadow: 3px 3px 0 #ffaec9, 6px 6px 0 #ff6f91;
+
+        }
+
+        .cartoon-heading {
+            font-family: 'Comic Sans MS', cursive;
+            color: #ff4d88;
+            font-size: 1.6em;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 1px;
+            text-shadow:
+                2px 2px 0 #ffffff,
+                3px 3px 0 #ffc0cb,
+                4px 4px 0 #ff69b4;
+            margin-bottom: 20px;
+        }
